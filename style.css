@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Slab", serif;
+}
+
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container,
+.produtos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header{
+    background-color: #482604;
+    padding: 16px 0;
+    color: #ccc;
+}
+
+header h1{
+    font-size: 34px;
+    font-style: italic;
+}
+
+header nav li{
+    display: inline;
+    margin-left: 15px;
+}
+
+header nav li a{
+    text-decoration: none;
+    color: #ccc;
+    transition: all .6s ease-in;
+}
+
+header nav li a:hover{
+    color: #683909;
+}
+
+header ul li{
+    list-style: none;
+}
+
+
+.main-image{
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.container-flex{
+    display: flex;
+    gap: 30px;
+    align-items: start;
+}
+
+section{
+    padding: 16px;
+    padding-top: 12px;
+}
+
+section h2{
+    border-bottom: 3px solid #482604;
+    margin-bottom: 16px;
+}
+
+section p {
+    margin-bottom: 8px;
+}
+
+.sobre-a-loja{
+    margin-top: 16px;
+    
+}
+
+section li{
+    list-style: none;
+}
+
+.lista{
+    margin-top: 16px;
+}
+
+.lista-produtos img{
+    max-width: 100%;
+    height: 300px;
+}
+
+.lista ul{
+    display: flex;
+    grid-template-columns: repeat(4, 24.5%);
+    column-gap: 0.9%;
+}
+
+#produtos h3{
+    text-align: center;
+    margin-top: 12px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 2px 0;
+    margin-top: 2px;
+    border: none;
+    background-color: #482604;
+    color: #fff;
+    font-size: 16px;
+    font-weight: normal;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all .5s ease-in;
+}
+
+button:hover {
+    background-color: #683909;
+}
+
+.rodape{
+    background-color:#482604 ;
+    color: #fff;
+    display:block;
+    text-align: center;
+}
+
+.rodape p{
+    list-style: none;
+    margin-left: 24px;
+    padding: 12px;
+    font-size: large;
+}
+
+
+@media screen and (max-width: 640px) {
+    .container {
+        max-width: 90%;
+        display: block;
+    }
+
+    header > .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding-bottom: 16px;
+    }
+
+    section .produtos {
+        align-items: flex-start;
+    }
+
+    .sobre-a-loja img {
+        width: 97%;
+        max-width: 100%;
+        display: block;
+        margin-left: 16px;
+    }
+
+    .container-flex {
+        display: block;
+    }
+
+    .lista ul {
+        display: block;
+        column-gap: 1%;
+        row-gap: 2%;
+    }
+
+    section h3 {
+        text-align: center;
+    }
+
+    .lista-produtos img{
+        max-width: 100%;
+        height: 300px;
+        width: 100%;
+    }
+
+    .preco {
+        text-align: center;
+    }
+
+    button {
+        margin-bottom: 12px;
+    }
+
+    .rodape p{
+        list-style: none;
+        margin-left: 24px;
+        padding: 12px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width:641px) and (max-width: 1023px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .sobre-a-loja .container-flex {
+        display: block;
+    }
+
+    .sobre-a-loja img {
+        max-width: 100%;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 2%;
+    }
+
+    .lista ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1%;
+    }
+
+    .lista-produtos img {
+        max-width: 100%;
+        height: auto;
+        height: 300px;
+    }
+
+    button {
+        margin-bottom: 10px;
+    }
+}
